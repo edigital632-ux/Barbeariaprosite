@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberSaaS Pro - Gestão de Elite</title>
+    <style>
+        :root {
+            --gold: #f1c40f;
+            --dark-gold: #d4ac0d;
+            --black: #0a0a0a;
+            --grey: #1a1a1a;
+            --white: #ffffff;
+            --text-grey: #b3b3b3;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            color: var(--gold);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 30px;
+            color: var(--text-grey);
+        }
+
+        .cta-button {
+            background-color: var(--gold);
+            color: var(--black);
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(241, 196, 15, 0.4);
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: var(--dark-gold);
+        }
+
+        /* Seção de Benefícios */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--grey);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+        }
+
+        .icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Seção de Oferta */
+        .offer-container {
+            background-color: #111;
+            padding: 100px 20px;
+            margin-top: 50px;
+        }
+
+        .price-card {
+            background: linear-gradient(145deg, #1a1a1a, #000);
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 30px;
+            border: 2px solid var(--gold);
+            position: relative;
+        }
+
+        .price-tag {
+            background: var(--gold);
+            color: var(--black);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .price {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin: 20px 0;
+            color: var(--white);
+        }
+
+        .price span {
+            font-size: 1.2rem;
+            color: var(--text-grey);
+        }
+
+        .features-list {
+            text-align: left;
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #333;
+            color: var(--text-grey);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .price { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BARBERSAAS PRO</h1>
+        <p class="subtitle">A ferramenta de elite para barbearias. Automatize processos, profissionalize sua agenda e fature muito mais com o sistema nº 1.</p>
+        <a href="#oferta" class="cta-button">QUERO ESCALAR MEU NEGÓCIO</a>
+    </header>
+
+    <section class="section">
+        <h2>Domine o seu Mercado</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="icon">📱</span>
+                <h3>Agendamento Online</h3>
+                <p>Seus clientes marcam horário pelo celular sem te interromper no WhatsApp.</p>
+            </div>
+            <div class="card">
+                <span class="icon">👥</span>
+                <h3>Gestão Multi-Barbeiro</h3>
+                <p>Gerencie toda a sua equipe e veja o desempenho individual de forma automática.</p>
+            </div>
+            <div class="card">
+                <span class="icon">📈</span>
+                <h3>Painel Master</h3>
+                <p>Tenha o controle financeiro total. Saiba exatamente quanto entra e quanto sai.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta" class="offer-container">
+        <div class="price-card">
+            <div class="price-tag">OFERTA LIMITADA</div>
+            <h3>Plano Profissional</h3>
+            <div class="price">R$ 30<span>/mês</span></div>
+            <ul class="features-list">
+                <li>Agendamentos Ilimitados</li>
+                <li>Painel Administrativo Master</li>
+                <li>Suporte Prioritário</li>
+                <li>Gestão de Comissões</li>
+                <li>Hospedagem Inclusa</li>
+            </ul>
+            <a href="#" class="cta-button" style="width: 100%; box-sizing: border-box; text-align: center;">GARANTIR MEU ACESSO</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BarberSaaS Pro. Criado com maestria por Zeus AI.</p>
+    </footer>
+
+</body>
+</html>
